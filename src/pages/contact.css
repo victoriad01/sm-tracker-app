@@ -1,0 +1,16 @@
+.contactUs h1 {
+  color: black;
+  padding-top: 100px;
+  font-weight: lighter;
+  letter-spacing: 0.6rem;
+}
+
+.ulcenter {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+li {
+  padding: 5px;
+}

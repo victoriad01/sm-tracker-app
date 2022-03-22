@@ -1,0 +1,15 @@
+.about-section h1 {
+  color: black;
+  padding-top: 80px;
+  font-weight: lighter;
+  letter-spacing: 0.6rem;
+}
+
+p {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 50px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  text-align: justify;
+}
