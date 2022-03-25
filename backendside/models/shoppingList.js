@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const shoppingListTemplate = new mongoose.Schema({
-  itemName: {
+  name: {
     type: String,
     required: true,
   },
-  itemProposedPrice: {
+  proposedPrice: {
     type: Number,
     required: true,
   },

@@ -242,6 +242,7 @@ Grocery List
 .submit-btn {
   background: rgb(219, 241, 238);
   border-color: transparent;
+  color: green;
   flex: 0 0 5rem;
   display: grid;
   align-items: center;

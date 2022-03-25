@@ -8,7 +8,7 @@ import Login from './pages/Login'
 import Error from './pages/Error'
 import Footer from './Footer'
 import Shopping from './shopping/Shopping'
-
+import NoteItems from './pages/NoteItems'
 function App() {
   return (
     <Router>
@@ -19,6 +19,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/shopping' element={<Shopping />} />
+        <Route path='/noteitems' element={<NoteItems />} />
         <Route path='/error' element={<Error />} />
         <Route path='*' element={<Error />} />
       </Routes>

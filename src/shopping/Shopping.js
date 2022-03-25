@@ -7,8 +7,8 @@ import Alert from './Alert'
 import axios from 'axios'
 
 function Shopping() {
-  const [itemName, setItemName] = useState('')
-  const [itemProposedPrice, setItemProposedPrice] = useState([])
+  const [name, setName] = useState('')
+  const [proposedPrice, setProposedPrice] = useState()
   const [list, setList] = useState([])
   const [isEditing, setIsEditing] = useState(false)
   const [editID, setEditID] = useState(null)
@@ -20,43 +20,36 @@ function Shopping() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (itemName === '' || itemProposedPrice == '') {
+
+    if (!name || !proposedPrice) {
       showAlert(
         true,
         'danger',
         'Comrade, please, enter value into all the fields!'
       )
-    } else if (itemName && isEditing) {
+    } else if (name && isEditing) {
       setList(
         list.map((item) => {
           if (item.id === editID) {
-            return { ...item, title: itemName, amount: itemProposedPrice }
+            return { ...item, name, proposedPrice }
           }
           return item
         })
       )
-      setItemName('')
-      setItemProposedPrice([])
+      setName('')
+      setProposedPrice([])
       setEditID(null)
       setIsEditing(false)
       showAlert(true, 'success', 'An Item edited')
     } else {
-      showAlert(true, 'success', 'Item Added Successfully!')
       const newItem = {
         id: new Date().getTime().toString(),
-        title: itemName,
-        amount: itemProposedPrice,
+        name: name,
+        proposedPrice: proposedPrice,
       }
-
-      axios
-        .post('http://localhost:4000/api/shopping', newItem)
-        .then((response) => console.log(response.data))
-
-      window.location = '/'
-
       setList([...list, newItem])
-      setItemName('')
-      setItemProposedPrice([])
+      setName('')
+      setProposedPrice([])
     }
   }
 
@@ -78,8 +71,26 @@ function Shopping() {
     const specificItem = list.find((item) => item.id === id)
     setIsEditing(true)
     setEditID(id)
-    setItemName(specificItem.title)
-    setItemProposedPrice(specificItem.amount)
+    setName(specificItem.name)
+    setProposedPrice(specificItem.proposedPrice)
+  }
+
+  const handleSubmitAll = () => {
+    console.log('all received bro!')
+
+    showAlert(true, 'success', 'Item Added Successfully!')
+    const newShoppingList = {
+      description: '', // not collecting description yet
+      items: list,
+    }
+    axios
+      .post('http://localhost:4000/api/shopping', newShoppingList)
+      .then((response) => console.log(response.data))
+    // window.location = '/noteitems'
+
+    setName('')
+    setProposedPrice([])
+    // setList([])
   }
 
   return (
@@ -92,15 +103,15 @@ function Shopping() {
             type='text'
             className='grocery'
             placeholder='Input Item Here'
-            value={itemName}
-            onChange={(e) => setItemName(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type='number'
             className='groceryb'
             placeholder='Input Item Proposed Price'
-            value={itemProposedPrice}
-            onChange={(e) => setItemProposedPrice(e.target.value)}
+            value={proposedPrice}
+            onChange={(e) => setProposedPrice(e.target.value)}
           />
 
           <button type='submit' className='submit-btn'>
@@ -121,7 +132,11 @@ function Shopping() {
             <button className='clear-btn' onClick={clearList}>
               Delete all
             </button>
-            <button type='submit' className='clear-btn'>
+            <button
+              type='submit'
+              className='clear-btn'
+              onClick={handleSubmitAll}
+            >
               Submit all
             </button>
           </span>

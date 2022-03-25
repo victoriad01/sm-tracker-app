@@ -1,11 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const shoppingListTemplateCopy = require('../models/shoppingList')
+const shoppingListTemplateCopy = require('../models/shoppingListNew')
 
 router.post('/shopping', (request, response) => {
+  console.log(request.body)
   const itemSubmitted = new shoppingListTemplateCopy({
-    itemName: request.body.itemName,
-    itemProposedPrice: request.body.itemProposedPrice,
+    
+    description: request.body.description,
+    items: request.body.items,
   })
   itemSubmitted
     .save()

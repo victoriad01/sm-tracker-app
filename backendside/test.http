@@ -2,7 +2,7 @@ POST http://localhost:4000/api/shopping
 Content-Type: application/json
 
 {
- "itemName": "Vegetable Oil",
- "itemProposedPrice": "2500"
+ "name": "Vegetable Oil",
+ "proposedPrice": "2500"
 }
 
