@@ -9,6 +9,10 @@ import Error from './pages/Error'
 import Footer from './Footer'
 import Shopping from './shopping/Shopping'
 import NoteItems from './pages/NoteItems'
+import ItemsDetail from './pages/ItemsDetail'
+import SingleItem from './pages/SingleItem'
+import CompareItem from './pages/CompareItem'
+
 function App() {
   return (
     <Router>
@@ -20,6 +24,10 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/shopping' element={<Shopping />} />
         <Route path='/noteitems' element={<NoteItems />} />
+        <Route path='/itemsdetail' element={<ItemsDetail />} />
+        <Route path='/items/:itemId' element={<SingleItem />} />
+        <Route path='/compare/:itemId' element={<CompareItem />} />
+
         <Route path='/error' element={<Error />} />
         <Route path='*' element={<Error />} />
       </Routes>

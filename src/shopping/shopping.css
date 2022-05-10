@@ -125,6 +125,7 @@ p {
     line-height: 1;
   }
 }
+
 .btn {
   text-transform: uppercase;
   background: transparent;
@@ -213,9 +214,12 @@ Grocery List
   /* background: var(--clr-grey-10); */
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
-  border-color: red;
+  /* border-color: red; */
+  border: none;
+  background-color: rgb(235, 233, 233);
   font-size: 0.8rem;
   flex: 1 0 auto;
+  border-left: 2px solid red;
   /* color: var(--clr-grey-5); */
 }
 
@@ -223,11 +227,15 @@ Grocery List
   padding: 0.25rem;
   padding-left: 1rem;
   /* background: var(--clr-grey-10); */
+  /* border: 1px solid gray; */
+  border: none;
+  background-color: rgb(235, 233, 233);
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
-  border-color: greenyellow;
+  /* border-color: greenyellow; */
   font-size: 0.8rem;
   flex: 1 0 auto;
+  border-left: 4px solid red;
   /* color: var(--clr-grey-5); */
 }
 .grocery::placeholder {
@@ -255,6 +263,7 @@ Grocery List
   content: var(--clr-primary-5);
   transition: var(--transition);
   font-size: 0.85rem;
+  height: 24px;
 }
 .submit-btn:hover {
   background: gray;
@@ -310,6 +319,7 @@ Grocery List
 .grocery-item:hover .title {
   color: var(--clr-grey-5);
 }
+
 .title {
   margin-bottom: 0;
   color: var(--clr-grey-1);
@@ -363,4 +373,50 @@ Grocery List
 }
 .clear-btn:hover {
   color: var(--clr-red-dark);
+}
+
+@media all and (max-width: 500px) {
+  body {
+    background-color: grey;
+  }
+
+  .form-control {
+    display: block;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  input {
+    margin: 3px;
+  }
+
+  button {
+    display: block;
+    /* margin: auto; */
+  }
+
+  .submit-btn {
+    display: block;
+    margin: auto;
+  }
+
+  .grocery-item {
+    margin-bottom: 0.01rem;
+    padding: 0.1rem 0.1rem;
+  }
+
+  .section-center {
+    padding: 1rem 0.5rem;
+  }
+
+  .grocery-form h3 {
+    margin-top: 8px;
+  }
+
+  .grocery-container h4 {
+    font-size: 0.7rem;
+  }
 }

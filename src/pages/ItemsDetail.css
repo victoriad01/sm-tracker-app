@@ -1,0 +1,19 @@
+.section-header {
+  text-align: center;
+}
+
+.section-header h3 {
+  margin-top: 80px;
+  text-decoration: underline;
+}
+
+.section-header p {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  color: red;
+  text-decoration: dashed;
+}
+
+/* li {
+  text-decoration: line-through;
+} */

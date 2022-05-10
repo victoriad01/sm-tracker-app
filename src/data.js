@@ -10,18 +10,18 @@ export const links = [
   {
     id: 2,
     url: '/about',
-    text: 'About',
+    text: 'About us',
   },
   {
     id: 3,
     url: '/contact',
-    text: 'Contact',
+    text: 'Contact us',
   },
-  {
-    id: 4,
-    url: '/login',
-    text: 'Login',
-  },
+  // {
+  //   id: 4,
+  //   url: '/login',
+  //   text: 'Login',
+  // },
   // {
   //   id: 4,
   //   url: '/ps',

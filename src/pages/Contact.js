@@ -7,10 +7,9 @@ export default function Contact() {
       <div className='contactUs'>
         <h1>Contact Us</h1>
         <ul className='ulcenter'>
-          <li>Email us: xxxxxxxx@sm.com</li>
-          <li>Phone number: xxxxxxxxxxx </li>
-          <li>Office Address: Plot 23, AB Street, Lagos, Nigeria</li>
-          <li>International Office Address: 456 Allien, Washington D.C</li>
+          <li>Email: vimedia53@gmail.com</li>
+          <li>Phone Number: +234 703 9140 269 </li>
+          <li>Office Address: Akure, Ondo State, Nigeria.</li>
         </ul>
       </div>
     </>

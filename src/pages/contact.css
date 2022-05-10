@@ -2,7 +2,9 @@
   color: black;
   padding-top: 100px;
   font-weight: lighter;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.4rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
 }
 
 .ulcenter {
@@ -13,4 +15,15 @@
 
 li {
   padding: 5px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+@media all and (max-width: 500px) {
+  .ulcenter {
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

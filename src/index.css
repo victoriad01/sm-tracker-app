@@ -102,7 +102,7 @@ h4 {
 }
 
 /*
-=============== 
+===============
 Navbar
 ===============
 */
@@ -110,12 +110,14 @@ nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
 }
+
 .nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.2rem;
 }
+
 .nav-toggle {
   font-size: 1.5rem;
   color: hsl(360, 67%, 44%);
@@ -124,14 +126,17 @@ nav {
   transition: var(--transition);
   cursor: pointer;
 }
+
 .nav-toggle:hover {
   color: var(--clr-primary-1);
   transform: rotate(90deg);
 }
+
 .nav-header img {
   height: 30px;
   cursor: pointer;
 }
+
 .links a {
   color: var(--clr-grey-3);
   font-size: 1rem;
@@ -141,21 +146,38 @@ nav {
   padding: 0.5rem 1rem;
   transition: var(--transition);
 }
+
 .links a:hover {
   background: var(--clr-primary-8);
   color: var(--clr-primary-5);
   padding-left: 1.5rem;
 }
+
 .social-icons {
   display: none;
 }
+
 .links-container {
   height: 0;
   overflow: hidden;
   transition: var(--transition);
 }
+
 .show-container {
   height: 10rem;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 60px;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -180,15 +202,6 @@ nav {
   h4 {
     line-height: 1;
   }
-}
-
-@media screen and (min-width: 992px) {
-  .section {
-    width: 95vw;
-  }
-}
-
-@media screen and (min-width: 800px) {
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -256,10 +269,6 @@ h1 {
   padding-top: 90px;
   font-size: 1.6rem;
 }
-/* .image1 img {
-  height: auto;
-  max-width: 100%;
-} */
 
 .mid-section {
   background-size: cover;
@@ -267,7 +276,7 @@ h1 {
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.87),
-      rgba(243, 234, 108, 0.73)
+      rgba(245, 242, 198, 0.73)
     ),
     url('./pictures/image1.jpg');
   background-size: cover;
@@ -280,8 +289,14 @@ h1 {
   padding-top: 40px;
   padding-left: 150px;
   padding-right: 150px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   line-height: 2.4rem;
+}
+
+.welcometext1 p {
+  color: black;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
 }
 
 .getstartedbutton {
@@ -289,23 +304,43 @@ h1 {
   margin: auto;
   align-items: center;
   background-color: white;
-  border-color: green;
+  border-width: thick;
+  border-color: rgb(27, 70, 27);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   color: black;
   font-size: 1.1rem;
-  padding: 10px 20px;
+  padding: 20px 40px;
   letter-spacing: 0.3rem;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .row {
-  padding: 120px 140px 30px;
+  display: block;
+  margin: auto;
 }
-.column {
+
+.row h3 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-decoration: underline;
+}
+
+.cardColumn {
+  display: flex;
   float: left;
-  width: 25%;
-  padding: 25px;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.about {
+  display: flex;
+  margin-bottom: 25px;
 }
 
 /* Clear floats after the columns */
@@ -327,6 +362,17 @@ h1 {
   text-align: center;
 }
 
+@media all and (max-width: 970px) {
+  .cardColumn {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .nav-toggle {
     display: flex;
@@ -344,16 +390,22 @@ h1 {
   .welcome {
     padding-top: 30px;
   }
+
   .welcometext1 {
-    text-align: left;
     margin: auto;
     padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 1.3rem;
-    line-height: 2.4rem;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .welcometext1 p {
+    color: black;
+    letter-spacing: 0.11rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
     text-align: justify;
   }
+
   .mid-section {
     padding-bottom: 25px;
   }
@@ -368,5 +420,77 @@ h1 {
   }
   .social-icons {
     display: none;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .toggleBar {
+    text-align: left;
+    transition: none;
+    margin-left: 250px;
+  }
+
+  .row {
+    padding: 5px 10px;
+    margin: auto;
+  }
+
+  .row h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: gainsboro;
+  }
+
+  .cardColumn {
+    display: flex;
+    margin: auto;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .nav-header {
+    padding: 6px;
+  }
+  .header h1 {
+    font-size: 1.4rem;
+    padding: 10px 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .welcometext1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .welcometext1 p {
+    font-size: 0.8rem;
+
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-align: justify;
+  }
+
+  .getstartedbutton {
+    font-size: 1rem;
+    padding: 8px 18px;
+    letter-spacing: 0.3rem;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .footer {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    background-color: #056d39;
+    color: aliceblue;
+    text-align: center;
   }
 }

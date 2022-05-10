@@ -1,0 +1,14 @@
+label {
+  font-size: 1rem;
+}
+
+input[type='checkbox']:checked + label {
+  color: red;
+  text-decoration: line-through;
+}
+
+.cbox4 {
+  font-size: 3rem;
+  color: red;
+  text-decoration: line-through;
+}

@@ -1,0 +1,15 @@
+p {
+  font-size: 1.2rem;
+}
+
+@media all and (max-width: 500px) {
+  .faButton {
+    display: flex;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  
+}

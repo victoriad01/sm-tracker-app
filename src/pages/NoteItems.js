@@ -7,7 +7,10 @@ function NoteItems() {
   return (
     <>
       <div className='center-content'>
-        <h4>View Submitted Items</h4>
+        <h2> Items you want to shop for has been saved.</h2>
+        <a href='/itemsdetail'>
+          <h4>View Submitted Items</h4>
+        </a>
 
         <button
           onClick={() => {

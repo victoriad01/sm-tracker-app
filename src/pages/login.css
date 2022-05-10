@@ -1,11 +1,9 @@
-.login h1 {
-  padding: 100px;
+.login {
   color: black;
-  padding-top: 100px;
-  font-weight: lighter;
-  letter-spacing: 0.6rem;
+  margin-top: 30px;
+  padding-top: 50px;
   text-align: center;
-  letter-spacing: 0.4rem;
-  font-weight: 900;
-  font-size: 2.5rem;
+  align-items: center;
+  background-color: gainsboro;
+  padding-bottom: 50px;
 }

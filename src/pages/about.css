@@ -1,15 +1,35 @@
 .about-section h1 {
   color: black;
-  padding-top: 80px;
+  padding-top: 50px;
   font-weight: lighter;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.4rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2rem;
 }
 
-p {
-  padding-left: 120px;
-  padding-right: 120px;
-  padding-bottom: 50px;
-  font-size: 1.1rem;
-  line-height: 1.9;
+.about-section p {
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 1.4rem;
+  line-height: 1.5;
   text-align: justify;
+  letter-spacing: 0.1rem;
+}
+
+@media all and (max-width: 500px) {
+  .about-section h1 {
+    color: black;
+    padding-top: 50px;
+    font-weight: lighter;
+    letter-spacing: 0.4rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color: black;
+  }
+
+  .about-section p {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: whitesmoke;
+  }
 }
