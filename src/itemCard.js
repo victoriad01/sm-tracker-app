@@ -13,7 +13,10 @@ export default function ItemCard({ item }) {
   const { itemId } = useParams()
   const clearAll = (itemId) => {
     axios
-      .delete(`http://localhost:4000/api/shopping/${itemId}`)
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/shopping/${itemId}`)
+
+      
+
       .then((res) => {})
       .catch((error) => console.log(error))
     window.location = `/shopping`

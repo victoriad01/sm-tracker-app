@@ -9,7 +9,10 @@ function SingleItem() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/shopping/${itemId}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/shopping/${itemId}`)
+
+      
+
       .then((res) => {
         setSingleItem(res.data)
       })

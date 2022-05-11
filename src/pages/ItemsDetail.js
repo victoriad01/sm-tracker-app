@@ -8,7 +8,10 @@ function ItemsDetail() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000/api/shopping')
+      .get(`${process.env.REACT_APP_BACKEND_URL}/shopping`)
+
+      // For the general format for replacement
+      // (`${process.env.REACT_APP_BACKEND_URL}/shopping`
       .then((res) => {
         setDataReceived(res.data)
       })

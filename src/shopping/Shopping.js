@@ -95,7 +95,7 @@ function Shopping() {
       items: list,
     }
     axios
-      .post('http://localhost:4000/api/shopping', newShoppingList)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/shopping`, newShoppingList)
       .then((response) => {
         console.log(response.data)
         const itemId = response.data._id
